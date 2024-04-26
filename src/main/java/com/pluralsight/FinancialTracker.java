@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -60,6 +61,26 @@ public class FinancialTracker {
         // For example: 2023-04-29,13:45:00,Amazon,PAYMENT,29.99
         // After reading all the transactions, the file should be closed.
         // If any errors occur, an appropriate error message should be displayed.
+        String line;
+        File file = new File(fileName);
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            while ((line = reader.readLine())!=null) {
+                String[] parts = line.split("//|");
+                if(parts.length ==5) {
+                    String date = parts[0].trim();
+                    String time = parts[1].trim();
+                    String type = parts[2].trim();
+                    String vendor = parts[3].trim();
+                    double price = Double.parseDouble(parts[4]);
+                    transactions.add(new Transaction(date,time,type,vendor,price));
+                }
+            }
+            reader.close();
+        } catch (Exception e) {
+            System.out.println("Error loaded inventory: " + e.getMessage());
+        }
+
     }
 
     private static void addDeposit(Scanner scanner) {
@@ -68,6 +89,10 @@ public class FinancialTracker {
         // The amount should be a positive number.
         // After validating the input, a new `Deposit` object should be created with the entered values.
         // The new deposit should be added to the `transactions` ArrayList.
+        System.out.println("Enter the date" + DATE_FORMATTER);
+        String userDate = scanner.nextLine();
+        System.out.println("Enter the time" + TIME_FORMATTER);
+        String userTime = scanner.nextLine();
     }
 
     private static void addPayment(Scanner scanner) {
