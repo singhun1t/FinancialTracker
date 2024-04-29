@@ -89,10 +89,29 @@ public class FinancialTracker {
         // The amount should be a positive number.
         // After validating the input, a new `Deposit` object should be created with the entered values.
         // The new deposit should be added to the `transactions` ArrayList.
-        System.out.println("Enter the date" + DATE_FORMATTER);
+        System.out.println("Enter the date" + DATE_FORMAT);
         String userDate = scanner.nextLine();
-        System.out.println("Enter the time" + TIME_FORMATTER);
+        System.out.println("Enter the time" + TIME_FORMAT);
         String userTime = scanner.nextLine();
+        System.out.println("Enter name of vendor: ");
+        String userVendor = scanner.nextLine().trim();
+        double userDeposit;
+        do {
+            System.out.println("Enter amount of deposit: ");
+            while(!scanner.hasNextDouble()){
+                System.out.println("Please enter a valid deposit amount");
+                scanner.next();
+            }
+            userDeposit = scanner.nextDouble();
+            if (userDeposit < 0.0) {
+                System.out.println("Enter a positive deposit amount");
+            }
+        }while(userDeposit<=0.0);
+
+
+        Transaction newTransaction= new Transaction(userDate,userTime,"deposit",userVendor,userDeposit);
+        transactions.add(newTransaction);
+        scanner.close();
     }
 
     private static void addPayment(Scanner scanner) {
@@ -101,6 +120,30 @@ public class FinancialTracker {
         // The amount should be a positive number.
         // After validating the input, a new `Payment` object should be created with the entered values.
         // The new payment should be added to the `transactions` ArrayList.
+        System.out.println("Enter the date" + DATE_FORMATTER);
+        String userDate = scanner.nextLine();
+        System.out.println("Enter the time" + TIME_FORMATTER);
+        String userTime = scanner.nextLine();
+        System.out.println("Enter name of vendor: ");
+        String userVendor = scanner.nextLine().trim();
+        double userPayment;
+        do {
+            System.out.println("Enter amount of payment: ");
+            while(!scanner.hasNextDouble()){
+                System.out.println("Please enter a valid payment amount");
+                scanner.next();
+            }
+            userPayment = scanner.nextDouble();
+            if (userPayment < 0.0) {
+                System.out.println("Enter a positive deposit amount");
+            }
+        }while(userPayment<=0.0);
+
+
+        Transaction newPayment= new Transaction(userDate,userTime,"payment",userVendor,userPayment);
+        transactions.add(newPayment);
+        scanner.close();
+
     }
 
     private static void ledgerMenu(Scanner scanner) {
@@ -141,6 +184,7 @@ public class FinancialTracker {
     private static void displayLedger() {
         // This method should display a table of all transactions in the `transactions` ArrayList.
         // The table should have columns for date, time, vendor, type, and amount.
+        System.out.println(transactions);
     }
 
     private static void displayDeposits() {
