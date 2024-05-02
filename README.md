@@ -1,10 +1,9 @@
-# Project Title
+# Financial Tracker
 
 ## Description of the Project
 
 Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
 
-![Class Diagram](path/to/your/class_diagram.png)
 
 ## User Stories
 
@@ -13,9 +12,7 @@ List the user stories that guided the development of your application. Format th
 - As a user, I want to be able to input my data, so that the application can process it accordingly.
 - As a user, I want to receive immediate feedback, so I can understand what to do next.
 
-## Setup
 
-Instructions on how to set up and run the project using IntelliJ IDEA.
 
 ### Prerequisites
 
@@ -54,13 +51,12 @@ Outline potential future enhancements or functionalities you might consider addi
 
 List resources such as tutorials, articles, or documentation that helped you during the project.
 
-- [Java Programming Tutorial](https://www.example.com)
-- [Effective Java](https://www.example.com)
 
-## Team Members
+- Github 
+- Java 17
+- 
 
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
+
 
 ## Thanks
 
