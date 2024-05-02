@@ -6,7 +6,7 @@ Financial Tracker is a program that allows for tracking financial transactions a
 
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
+
 
 - As a user, I would like for my Deposits to be Tracked within a program so that I can review them at a later time
 - As a user, I should be able to input my Payments into a program for storage
@@ -49,7 +49,6 @@ Include screenshots or GIFs that show your application in action. Use tools like
 
 ## Future Work
 
-Outline potential future enhancements or functionalities you might consider adding:
 
 - Have a method that calculates the totals of transactions for a period of Time to show how much was deposited vs spent
 - Organize deposits to be stored separately from payments
@@ -57,12 +56,11 @@ Outline potential future enhancements or functionalities you might consider addi
 
 ## Resources
 
-List resources such as tutorials, articles, or documentation that helped you during the project.
 
 
 -[w3schools](https://www.w3schools.com/java/java_intro.asp)
 -[Alex Lee Youtube](https://www.youtube.com/@alexlorenlee)
-
+-[GeeksforGeeks](https://www.geeksforgeeks.org/arrays-in-java/?ref=shm)
 
 
 ## Thanks
