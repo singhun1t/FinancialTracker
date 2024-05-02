@@ -50,17 +50,17 @@ Include screenshots or GIFs that show your application in action. Use tools like
 
 Outline potential future enhancements or functionalities you might consider adding:
 
-- Additional feature to be developed.
-- Improvement of current functionalities.
+- Have a method that calculates the totals of transactions for a period of Time to show how much was deposited vs spent
+- Organize deposits to be stored separately from payments
+
 
 ## Resources
 
 List resources such as tutorials, articles, or documentation that helped you during the project.
 
 
-- Github 
-- Java 17
-- 
+-[w3schools](https://www.w3schools.com/java/java_intro.asp)
+-[Alex Lee Youtube](https://www.youtube.com/@alexlorenlee)
 
 
 
