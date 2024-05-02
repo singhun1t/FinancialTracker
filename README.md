@@ -1,16 +1,19 @@
 # Financial Tracker
 
 ## Description of the Project
-
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
+Financial Tracker is a program that allows for tracking financial transactions and writing them to a file for viewing. Program then allows the user to search through the file for specific transactions by type or time frame.
 
 
 ## User Stories
 
 List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
 
-- As a user, I want to be able to input my data, so that the application can process it accordingly.
-- As a user, I want to receive immediate feedback, so I can understand what to do next.
+- As a user, I would like for my Deposits to be Tracked within a program so that I can review them at a later time
+- As a user, I should be able to input my Payments into a program for storage
+- As a user I want to be able to view all the transactions that are stored
+- As a user, I want to filter through my transactions and search based on deposits and payments
+- As a user, I should be able to also filter through transactions by time frame
+- As a user, I should be able to filter through transactions by vendor name
 
 
 
@@ -31,14 +34,17 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Technologies Used
 
-- Java: Mention the version you are using.
-- Any additional libraries or frameworks used in the project.
+- [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- [Intellijay](https://www.jetbrains.com/idea/) 
+- [Git Bash ](https://git-scm.com/downloads)
 
 ## Demo
 
 Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
 
-![Application Screenshot](path/to/your/screenshot.png)
+
+
+
 
 ## Future Work
 

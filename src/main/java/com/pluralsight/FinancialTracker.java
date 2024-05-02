@@ -189,6 +189,7 @@ public class FinancialTracker {
                     break;
                 case "H":
                     running = false;
+                    break;
                 default:
                     System.out.println("Invalid option");
                     break;
@@ -276,6 +277,8 @@ public class FinancialTracker {
                     LocalDate today4 = LocalDate.now();
                     LocalDate startLastYear = today4.minusYears(1).withDayOfYear(1);
                     LocalDate endLastYear = today4.minusYears(1).withDayOfYear(today4.minusYears(1).lengthOfYear());
+                    filterTransactionsByDate(startLastYear,endLastYear);
+                    break;
                 case "5":
                     System.out.println("Please enter the vendor name");
                     String vendorName = scanner.nextLine();
@@ -296,14 +299,16 @@ public class FinancialTracker {
         System.out.printf("%-25s %-20s %-25s %15s\n", "Date", "Time", "Vendor", "Amount");
         boolean withinRange = false;
         for(Transaction transaction : transactions){
+
             LocalDate transDate = transaction.getDate();
             if(transDate.isAfter(startDate.minusDays(1)) && transDate.isBefore(endDate.plusDays(1))){
                 System.out.printf("%-25s %-20s %-25s %15.2f\n", transaction.getDate(), transaction.getTime(), transaction.getVendor(),transaction.getPrice());
                 withinRange = true;
             }
-            if(!withinRange){
-                System.out.println("No transactions fall within the date range");
-            }
+
+        }
+        if (!withinRange){
+            System.out.println("No transactions fall within the date range");
         }
     }
 
@@ -313,11 +318,13 @@ public class FinancialTracker {
         for(Transaction transaction : transactions) {
             if (transaction.getVendor().equalsIgnoreCase(vendor)){
                 System.out.printf("%-25s %-20s %-25s %15.2f\n",transaction.getDate(), transaction.getTime(), transaction.getVendor(), transaction.getPrice() );
-            }
-            if(!withinRange){
-                System.out.println("No transactions match the specified vendor name");
+                withinRange = true;
             }
 
+
+        }
+        if(!withinRange){
+            System.out.println("No transactions match the specified vendor name");
         }
     }
 }
