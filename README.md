@@ -42,6 +42,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
 
+![project gif](https://github.com/singhun1t/FinancialTracker/assets/16910183/e0d9c31d-88a2-467d-9a07-1f33bbc5623b)
 
 
 
@@ -68,5 +69,5 @@ List resources such as tutorials, articles, or documentation that helped you dur
 
 Express gratitude towards those who provided help, guidance, or resources:
 
-- Thank you to [Mentor's Name] for continuous support and guidance.
+- Thank you to Raymond for continuous support and guidance.
 - A special thanks to all teammates for their dedication and teamwork.
