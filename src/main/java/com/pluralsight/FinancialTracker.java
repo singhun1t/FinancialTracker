@@ -103,14 +103,14 @@ public class FinancialTracker {
         }while(userDeposit<=0.0);
 
 
-        Transaction newTransaction= new Transaction(date,time,type,userVendor,userDeposit);
-        transactions.add(newTransaction);
+        Transaction newDeposit= new Transaction(date,time,type,userVendor,userDeposit);
+        transactions.add(newDeposit);
 
 
         try {
             FileWriter fileWriter = new FileWriter(FILE_NAME, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            String line = String.format("%s|%s|%s|%s|%.2f", newTransaction.getDate(), newTransaction.getTime(),newTransaction.getType(), newTransaction.getVendor(),newTransaction.getPrice());
+            String line = String.format("%s|%s|%s|%s|%.2f", newDeposit.getDate(), newDeposit.getTime(),newDeposit.getType(), newDeposit.getVendor(),newDeposit.getPrice());
             bufferedWriter.write(line);
             bufferedWriter.newLine();
             bufferedWriter.close();
@@ -132,7 +132,7 @@ public class FinancialTracker {
         System.out.println("Enter name of vendor: ");
         String userVendor = scanner.nextLine().trim();
         double userPayment;
-       // do {
+
             System.out.println("Enter amount of payment: ");
             userPayment = scanner.nextDouble();
                 if (userPayment > 0) {
